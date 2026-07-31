@@ -10,7 +10,7 @@ echo "Pulling latest changes from Git..."
 git pull origin master
 
 echo "Building and starting production containers..."
-docker-compose up --build -d
+docker compose up --build -d
 
 echo "Running database migrations..."
 docker exec aruda_presence_prod php artisan migrate --force
