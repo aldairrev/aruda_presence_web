@@ -39,7 +39,7 @@ export default function MusicCard({ music, musicConnected, onConnect, onDisconne
                 <div className="mt-6 border-t border-white/5 pt-4 w-full z-10">
                     <button 
                         onClick={onConnect}
-                        className="flex items-center justify-center gap-2 w-full py-3 px-4 rounded-[12px] bg-white/5 hover:bg-gradient-to-r hover:from-brand-blue hover:to-brand-purple text-slate-300 hover:text-white text-sm font-semibold hover:shadow-[0_6px_20px_rgba(0,195,255,0.2)] hover:-translate-y-0.5 transition-all duration-300 border border-white/5 cursor-pointer hover:scale-[1.02]"
+                        className="flex items-center justify-center gap-2 w-full py-3 px-4 rounded-[12px] bg-white/5 hover:bg-brand-pink text-slate-300 hover:text-white text-sm font-semibold hover:shadow-[0_6px_20px_rgba(255,64,129,0.3)] hover:-translate-y-0.5 transition-all duration-300 border border-white/5 cursor-pointer hover:scale-[1.02]"
                     >
                         <i className="fa-solid fa-plug"></i> {t('music.connect')}
                     </button>

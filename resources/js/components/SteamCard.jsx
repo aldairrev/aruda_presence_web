@@ -38,7 +38,7 @@ export default function SteamCard({ steam, steamConnected, onConnect, onDisconne
                 <div className="mt-6 border-t border-white/5 pt-4 w-full z-10">
                     <button 
                         onClick={onConnect}
-                        className="flex items-center justify-center gap-2 w-full py-3 px-4 rounded-[12px] bg-white/5 hover:bg-gradient-to-r hover:from-brand-blue hover:to-brand-purple text-slate-300 hover:text-white text-sm font-semibold hover:shadow-[0_6px_20px_rgba(0,195,255,0.2)] hover:-translate-y-0.5 transition-all duration-300 border border-white/5 cursor-pointer hover:scale-[1.02]"
+                        className="flex items-center justify-center gap-2 w-full py-3 px-4 rounded-[12px] bg-white/5 hover:bg-brand-purple text-slate-300 hover:text-white text-sm font-semibold hover:shadow-[0_6px_20px_rgba(155,81,224,0.3)] hover:-translate-y-0.5 transition-all duration-300 border border-white/5 cursor-pointer hover:scale-[1.02]"
                     >
                         <i className="fa-solid fa-plug"></i> {t('gaming.connect')}
                     </button>
@@ -59,7 +59,7 @@ export default function SteamCard({ steam, steamConnected, onConnect, onDisconne
                 <div className="flex items-center gap-2">
                     <span className={`text-[10px] font-bold tracking-wider uppercase px-3 py-1.5 rounded-[12px] flex items-center gap-1.5 badge ${
                         isSteamIngame 
-                            ? 'bg-gradient-to-r from-brand-purple to-brand-blue text-white shadow-[0_2px_8px_rgba(155,81,224,0.4)]' 
+                            ? 'bg-brand-purple text-white border border-brand-purple/20 shadow-[0_2px_8px_rgba(155,81,224,0.3)]' 
                             : 'bg-white/5 text-slate-400 border border-white/5'
                     }`}>
                         {isSteamIngame ? t('gaming.status.playing') : t('gaming.status.offline')}
@@ -102,7 +102,7 @@ export default function SteamCard({ steam, steamConnected, onConnect, onDisconne
                     href={steam?.game?.store_url || "#"} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className={`flex items-center justify-center gap-2 py-2 px-4 rounded-[10px] bg-gradient-to-r from-brand-blue to-brand-purple text-white text-xs font-semibold hover:shadow-[0_6px_20px_rgba(0,195,255,0.4)] hover:-translate-y-0.5 transition-all duration-300 border border-white/5 shadow-[0_4px_12px_rgba(0,195,255,0.2)] ${
+                    className={`flex items-center justify-center gap-2 py-2 px-4 rounded-[10px] bg-brand-blue text-slate-950 text-xs font-bold hover:bg-brand-blue/90 hover:shadow-[0_6px_20px_rgba(0,195,255,0.3)] hover:-translate-y-0.5 transition-all duration-300 border border-white/5 shadow-[0_4px_12px_rgba(0,195,255,0.1)] ${
                         !isSteamIngame ? 'opacity-40 pointer-events-none cursor-default' : 'hover:scale-[1.02] cursor-pointer'
                     }`}
                 >

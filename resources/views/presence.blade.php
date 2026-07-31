@@ -17,10 +17,10 @@
 
 <body class="min-h-screen w-full flex justify-center items-center px-4 py-8 relative overflow-hidden text-slate-100">
     <div
-        class="absolute rounded-full pointer-events-none transition-all duration-1000 ease-in-out opacity-25 blur-[130px] w-[600px] h-[600px] z-[-1] top-[-100px] left-[-100px] bg-[radial-gradient(circle,var(--color-brand-blue)_0%,transparent_70%)]">
+        class="absolute rounded-full pointer-events-none transition-all duration-1000 ease-in-out opacity-25 blur-[130px] w-[600px] h-[600px] z-[-1] top-[-100px] left-[-100px] bg-brand-blue">
     </div>
     <div
-        class="absolute rounded-full pointer-events-none transition-all duration-1000 ease-in-out opacity-20 blur-[130px] w-[600px] h-[600px] z-[-1] bottom-[-100px] right-[-100px] bg-[radial-gradient(circle,var(--color-brand-yellow)_0%,transparent_70%)]">
+        class="absolute rounded-full pointer-events-none transition-all duration-1000 ease-in-out opacity-20 blur-[130px] w-[600px] h-[600px] z-[-1] bottom-[-100px] right-[-100px] bg-brand-yellow">
     </div>
 
     <div id="app" class="w-full max-w-[1200px] flex flex-col gap-6 z-10"></div>

@@ -72,7 +72,7 @@ export default function PresenceDashboard() {
                 
                 <div className="flex-1 text-center sm:text-left">
                     <div className="flex items-center justify-center sm:justify-start gap-3">
-                        <h1 className="text-3xl font-bold tracking-tight bg-gradient-to-r from-white via-slate-100 to-brand-blue bg-clip-text text-transparent flex items-center justify-center sm:justify-start gap-1.5">
+                        <h1 className="text-3xl font-bold tracking-tight text-white flex items-center justify-center sm:justify-start gap-1.5">
                             {steam?.user?.name || ''}
                             {steam?.user?.name && (
                                 <i className="fa-solid fa-circle-check text-brand-blue text-base" title="Verified Presence"></i>
