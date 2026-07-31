@@ -1,0 +1,127 @@
+@import "tailwindcss";
+@import "@fortawesome/fontawesome-free/css/all.min.css";
+
+@theme {
+    --color-spotify-green: #1db954;
+    --color-lastfm-red: #d51007;
+    --color-steam-blue: #1b2838;
+    --color-steam-active: #66c0f4;
+    --color-steam-ingame: #90ba3c;
+    --color-neon-blue: #3b82f6;
+    --color-neon-purple: #8b5cf6;
+    --color-bg-dark: #020204;
+    --color-glass-bg: rgba(6, 6, 10, 0.7);
+    --color-glass-border: rgba(255, 255, 255, 0.08);
+
+    --color-brand-blue: #00c3ff;
+    --color-brand-yellow: #ffaa00;
+    --color-brand-pink: #ff4081;
+    --color-brand-purple: #9b51e0;
+
+    --animate-equalize: equalize 1.2s infinite alternate;
+    --animate-pulse-glow: pulse-glow 2s infinite;
+    --animate-spin-slow: spin 20s linear infinite;
+    --animate-float: float 2s infinite ease-in-out;
+}
+
+@keyframes equalize {
+    0% { height: 3px; }
+    100% { height: 18px; }
+}
+
+@keyframes pulse-glow {
+    0% { opacity: 0.3; transform: scale(0.9); }
+    50% { opacity: 1; transform: scale(1.1); box-shadow: 0 0 8px #3b82f6; }
+    100% { opacity: 0.3; transform: scale(0.9); }
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--color-bg-dark);
+}
+
+.eq-bar:nth-child(1) { animation-delay: 0.1s; }
+.eq-bar:nth-child(2) { animation-delay: 0.3s; }
+.eq-bar:nth-child(3) { animation-delay: 0.6s; }
+.eq-bar:nth-child(4) { animation-delay: 0.2s; }
+.eq-bar:nth-child(5) { animation-delay: 0.5s; }
+.eq-bar:nth-child(6) { animation-delay: 0.4s; }
+
+.spin-animation {
+    animation: spin 20s linear infinite;
+    border-radius: 50% !important;
+}
+
+.glass-card {
+    background: var(--color-glass-bg);
+    border: 1px solid var(--color-glass-border);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+    border-color: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5), 0 0 30px rgba(59, 130, 246, 0.05);
+}
+
+.badge {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 6px 12px;
+    border-radius: 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.3s ease;
+}
+
+.badge-active {
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    color: var(--color-neon-blue);
+}
+
+.badge-inactive {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    color: #94a3b8;
+}
+
+.badge-away {
+    background: rgba(255, 170, 0, 0.1);
+    border: 1px solid rgba(255, 170, 0, 0.15);
+    color: var(--color-brand-yellow);
+}
+
+.status-indicator {
+    background-color: #64748b;
+    transition: background-color 0.5s ease, box-shadow 0.5s ease;
+}
+.status-indicator.online {
+    background-color: #00c3ff;
+    box-shadow: 0 0 10px rgba(0, 195, 255, 0.6);
+}
+.status-indicator.ingame {
+    background-color: #90ba3c;
+    box-shadow: 0 0 10px rgba(144, 186, 60, 0.6);
+}
+.status-indicator.away {
+    background-color: #ffaa00;
+    box-shadow: 0 0 10px rgba(255, 170, 0, 0.6);
+}
+.status-indicator.offline {
+    background-color: #64748b;
+}
+.status-indicator.disconnected {
+    background-color: #18181b;
+}
