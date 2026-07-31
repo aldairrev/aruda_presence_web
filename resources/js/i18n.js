@@ -47,6 +47,10 @@ const resources = {
         connect: "Activate",
         disconnect: "Deactivate",
         disconnected_desc: "Steam presence integration is offline. Activate to check active status."
+      },
+      visitor_logs: {
+        unauthorized_title: "Access Denied",
+        unauthorized_desc: "You do not have permission to view this page."
       }
     }
   },
@@ -95,6 +99,10 @@ const resources = {
         connect: "Activate",
         disconnect: "Deactivate",
         disconnected_desc: "Steam presence integration is offline. Activate to check active status."
+      },
+      visitor_logs: {
+        unauthorized_title: "アクセス拒否",
+        unauthorized_desc: "このページを表示する権限がありません。"
       }
     }
   }

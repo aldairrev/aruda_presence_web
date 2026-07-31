@@ -14,6 +14,18 @@ class PresenceController extends Controller
      */
     public function getPresence(Request $request)
     {
+        $clientIp = $request->ip();
+        $allowedIpsStr = env('ALLOWED_IPS', '127.0.0.1,::1');
+        $allowedIps = array_map('trim', explode(',', $allowedIpsStr));
+
+        if (!in_array($clientIp, $allowedIps)) {
+            return response()->json([
+                'authorized' => false,
+                'client_ip' => $clientIp,
+                'message' => "Access denied. Your IP ({$clientIp}) is not authorized to view this page."
+            ], 403);
+        }
+
         $lang = $request->header('Accept-Language', 'en');
         if (in_array($lang, ['en', 'ja'])) {
             app()->setLocale($lang);

@@ -8,3 +8,4 @@ Route::get('/', function () {
 });
 
 Route::get('/api/presence', [PresenceController::class, 'getPresence']);
+
