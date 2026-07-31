@@ -1,5 +1,4 @@
 #!/bin/bash
-# Exit immediately if any command returns a non-zero status
 set -e
 
 echo "Starting Production Deployment..."
@@ -11,6 +10,8 @@ git pull origin master
 
 echo "Building and starting production containers..."
 docker compose up --build -d
+
+sleep 3
 
 echo "Running database migrations..."
 docker exec aruda_presence_prod php artisan migrate --force
