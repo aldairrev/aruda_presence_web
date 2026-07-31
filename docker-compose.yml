@@ -6,8 +6,8 @@ services:
     container_name: aruda_presence_prod
     ports:
       - "${APP_PORT:-80}:8000"
-    env_file:
-      - .env
+    volumes:
+      - ./.env:/var/www/html/.env
     networks:
       - backend
     restart: always

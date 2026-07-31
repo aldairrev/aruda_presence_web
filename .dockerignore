@@ -1,0 +1,13 @@
+.git
+.env
+node_modules
+vendor
+public/build
+Dockerfile
+Dockerfile.dev
+docker-compose.yml
+docker-compose.dev.yml
+deploy.sh
+walkthrough.md
+task.md
+implementation_plan.md
