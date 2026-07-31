@@ -11,8 +11,6 @@ git pull origin master
 echo "Building and starting production containers..."
 docker compose up --build -d
 
-sleep 3
-
 echo "Running database migrations..."
 docker exec aruda_presence_prod php artisan migrate --force
 
