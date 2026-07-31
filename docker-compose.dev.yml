@@ -5,7 +5,7 @@ services:
       dockerfile: Dockerfile.dev
     container_name: aruda_presence_dev
     ports:
-      - "8180:8000"
+      - "${APP_PORT:-8180}:8000"
       - "5173:5173"
     volumes:
       - .:/var/www/html
