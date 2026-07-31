@@ -1,8 +1,9 @@
 # Stage 1: Build frontend assets
 FROM node:20-alpine AS node-builder
+ENV NODE_OPTIONS="--max-old-space-size=512"
 WORKDIR /app
 COPY package*.json ./
-RUN npm ci
+RUN npm ci --quiet --no-audit --no-fund
 COPY . .
 RUN npm run build
 
