@@ -7,7 +7,7 @@ echo "Starting Production Deployment..."
 cd "$(dirname "$0")"
 
 echo "Pulling latest changes from Git..."
-git pull origin main
+git pull origin master
 
 echo "Building and starting production containers..."
 docker-compose up --build -d
